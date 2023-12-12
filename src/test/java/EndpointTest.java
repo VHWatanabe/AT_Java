@@ -1,4 +1,3 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -11,10 +10,9 @@ public class EndpointTest {
 
     @Test
     public void testeListagem() throws IOException {
-        URL url = new URL("http://127.0.0.1:4657/usuarios");
+        URL url = new URL("http://127.0.0.1:4567/usuarios");
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
         conexao.setRequestMethod("GET");
-        ObjectMapper objectMapper = new ObjectMapper();
         int responseCode = conexao.getResponseCode();
         assertEquals(200,responseCode);
     }

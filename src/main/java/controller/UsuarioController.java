@@ -17,6 +17,8 @@ public class UsuarioController {
     public UsuarioController() {
         this.usuarioService = new UsuarioService();
         this.objMapper = new ObjectMapper();
+
+        respostasRequisicoes();
     }
 
     public UsuarioController(UsuarioService usuarioService, ObjectMapper objMapper) {
